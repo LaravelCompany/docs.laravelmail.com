@@ -24,20 +24,20 @@ To run Laravel Mail, your environment must meet a few minimum requirements:
 Clone the repository to your environment, using the following command:
 
 ```bash
-git clone https://github.com/laravelcompany/laravel-mail.git
+git clone https://github.com/laravelcompany/app.laravelmail.com.git
 ```
 
 Next, change into the directory and install the dependencies:
 
 ```bash
-cd laravel-mail
+cd app.laravelmail.com
 composer install
 ```
 
 Once the installation is complete, you can run the migrations to create the database tables:
 
 ```bash
-php artisan migrate
+php artisan migrate:fresh --seed
 ```
 
 Finally, you can run the application:
