@@ -1,15 +1,15 @@
 {
-  "name": "celestialdocs",
+  "name": "laravel-mail-docs",
   "type": "module",
-  "version": "0.0.5",
-  "description": "Documentation template using AstroJS and Shadcn",
-  "author": "Hyperoot <rajesh@hyperoot.dev>",
+  "version": "0.0.1",
+  "description": "The official documentation for Laravel Mail",
+  "author": "Stefan <stefan@izdrail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HYP3R00T/CelestialDocs"
+    "url": "https://github.com/LaravelCompany/docs.laravelmail.com"
   },
-  "homepage": "https://celestialdocs.hyperoot.dev/",
+  "homepage": "https://docs.laravelmail.com",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -18,10 +18,14 @@
     "astro": "astro"
   },
   "keywords": [
-    "docs",
-    "documentation",
-    "astro",
-    "withastro"
+    "email",
+    "marketing",
+    "laravel",
+    "marketing-platform",
+    "marketing-automation",
+    "laravel-mail",
+    "laravel-mail-docs",
+    "with-laravel-mail"
   ],
   "dependencies": {
     "@astrojs/check": "^0.8.2",
