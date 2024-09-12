@@ -24,13 +24,15 @@ export const menu_items: { title: string; href: string }[] = [
 // Just works with top-level folders and files. For files, don't add extension as it looks for the slug, and not the file name.
 export const side_nav_menu_order: string[] = [
   "getting-started",
+  "getting-started/installation",
+  "getting-started/package-installation",
   "guides",
   "api/introduction",
-  "api/api-campaigns",
-  "api/api-contacts",
+  "api/campaigns",
   "api/api-emails",
-  "api/api-templates",
-  "api/api-users",
+  "api/subscribers",
+  "api/tags",
+  "api/templates",
   "reference",
 ];
 
