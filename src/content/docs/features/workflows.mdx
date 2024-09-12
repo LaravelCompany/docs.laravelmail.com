@@ -1,63 +1,20 @@
 ---
-title: Introduction
+title: Workflows
 ---
 
-You can install the package via composer:
+## Overview
 
-```bash
-composer require the42coders/workflows
-```
+It allows you to create email workflows which can be triggered by different events and execute a sequence of tasks.
 
-You need to register the routes to your web.php routes File as well.
-Since the Workflow Package is very powerful make sure to secure the routes with whatever authentication
-you use in the rest of your app.
+## Workflows
 
-```php
-Route::group(['middleware' => ['auth']], function () {
-    \the42coders\Workflows\Workflows::routes();
-});
-```
-
-You need to publish the assets of the Package
-
-```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=assets
-```
-
-Other publishable Contents are
-
-config
-
-```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=config
-```
-
-language
-
-```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=lang
-```
-
-views
-
-```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=views
-```
-
-## Usage
-
-The Workflow Package is working out of the Box in your Laravel application. Just go to the route /workflows
-to get started.
-
-
-### Workflows
-
-A Workflow is gets started by a Trigger and then executes the Tasks in the Order you set them.
-To pass information between the Tasks we have the DataBus.
+A **Workflow** is initiated by a **Trigger** and executes a sequence of **Tasks** in a specified order. The package uses a **DataBus** to facilitate the transfer of information between tasks, ensuring smooth data handling and process flow.
 
 ### Triggers
 
-A Trigger is the Starting Point and defines how a Workflow gets called. More Triggers coming soon.
+**Triggers** act as the starting points for workflows, determining how and when a workflow is activated. Each trigger defines the conditions under which a workflow will be executed.
+
+**Note**: Additional trigger types will be introduced in future updates.
 
 #### ObserverTrigger
 
@@ -82,19 +39,19 @@ You have multiple ways of rendering ButtonTrigger.
 
 ##### ByName
 ``` php
- {!! the42coders\Workflows\Triggers\ButtonTrigger::renderButtonByName('name', $model) !!}
+ {!! LaravelCompany\Mail\Triggers\ButtonTrigger::renderButtonByName('name', $model) !!}
 ```
 
 ##### ByWorkflowId
 ``` php
- {!! the42coders\Workflows\Triggers\ButtonTrigger::renderButtonByWorkflowId(workflow_id, $model) !!}
+ {!! LaravelCompany\Mail\Triggers\ButtonTrigger::renderButtonByWorkflowId(workflow_id, $model) !!}
 ```
 
 ##### ByCategory
 This will return all Triggers from the Category.
 
 ``` php
- {!! the42coders\Workflows\Triggers\ButtonTrigger::renderButtonsByCategory('categoryName', $model) !!}
+ {!! LaravelCompany\Mail\Triggers\ButtonTrigger::renderButtonsByCategory('categoryName', $model) !!}
 ```
 
 

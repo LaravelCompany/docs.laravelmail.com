@@ -26,6 +26,7 @@ export const side_nav_menu_order: string[] = [
   "getting-started",
   "getting-started/installation",
   "getting-started/package-installation",
+  "features",
   "guides",
   "api/introduction",
   "api/campaigns",
