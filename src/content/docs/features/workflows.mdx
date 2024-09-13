@@ -6,13 +6,26 @@ title: Workflows
 
 It allows you to create email workflows which can be triggered by different events and execute a sequence of tasks.
 
+![https://i.imgur.com/7GHUog5.png](https://i.imgur.com/7GHUog5.png)
+
+
 ## Workflows
 
 A **Workflow** is initiated by a **Trigger** and executes a sequence of **Tasks** in a specified order. The package uses a **DataBus** to facilitate the transfer of information between tasks, ensuring smooth data handling and process flow.
 
+
+
+## Workflows Logs
+
+The workflow logs are stored in the database and can be accessed via the **WorkflowLogs** button in the bottom bar.
+
+![https://i.imgur.com/vQdJXcp.png](https://i.imgur.com/vQdJXcp.png)
+
 ### Triggers
 
-**Triggers** act as the starting points for workflows, determining how and when a workflow is activated. Each trigger defines the conditions under which a workflow will be executed.
+**Triggers** act as the starting points for workflows, determining how and when a workflow is activated.
+
+Each trigger defines the conditions under which a workflow will be executed.
 
 **Note**: Additional trigger types will be introduced in future updates.
 
@@ -21,7 +34,7 @@ A **Workflow** is initiated by a **Trigger** and executes a sequence of **Tasks*
 The Observer Trigger can listen to Eloquent Model Events and will then pass the Model which triggered the Event to the
 Workflow.
 
-To make it Work add the WorkflowObservable to your Eloquent Model.
+To make it Work, add the WorkflowObservable to your Eloquent Model.
 
 ``` php
  use WorkflowObservable;

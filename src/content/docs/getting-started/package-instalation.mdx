@@ -31,7 +31,7 @@ Alternatively, you can add the following to your `composer.json` file:
 and then run `composer update` to install it.
 
 ## Publish Assets
-Run the following command to publish SendPortal's assets:
+Run the following command to publish Laravel Mail's assets:e
 
 ```bash
 php artisan vendor:publish --provider=LaravelCompany\\Mail\\MailBaseServiceProvider
@@ -45,7 +45,7 @@ The following sections will detail how to use this facade to get Laravel Mail up
 Other sections are marked as Optional and may or may not be required for your own use case.
 
 ## Workspace Resolver (Required)
-In order to support multi-tenancy, Laravel Mail requires a "Workspace ID" for the session.
+To support multi-tenancy, Laravel Mail requires a "Workspace ID" for the session.
 Even if your host application does not use multi-tenancy, you will still need to provide a "dummy" integer.
 
 The Workspace ID will be used in both web and API sessions and will be stored to the database in the `workspace_id` column of tables like `laravel_mail_campaigns`, `laravel_mail_subscribers`, etc.
@@ -94,9 +94,9 @@ The following routes can all be placed inside a route group, in which case any g
 However, note that Laravel Mail's route names already include `laravel-mail.`.
 
 ### Web Routes (Required)
-To access SendPortal's application resources (e.g. Campaigns, Subscribers, Templates, Messages etc) from the browser, you must register Laravel Mail's web routes.
+To access SendPortal's application resources (e.g., Campaigns, Subscribers, Templates, Messages, etc) from the browser, you must register Laravel Mail's web routes.
 
-Inside a routes file, call the `LaravelCompany\Mail\Facades\LaravelMail::webRoutes()` method.
+Inside a route file, call the `LaravelCompany\Mail\Facades\LaravelMail::webRoutes()` method.
 
 > These routes include features like subscriber management and campaign sending, and therefore should not be exposed without some means of authentication.
 
