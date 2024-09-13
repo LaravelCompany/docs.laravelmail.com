@@ -4,7 +4,7 @@ export const SITE = {
   website: "https://docs.laravelmail.com", // replace this with your deployed domain
   author: "Stefan Izdrail",
   desc: "Documentation for Laravel Mail",
-  title: "Laravel Mail Docs",
+  title: "Laravel Mail",
   ogImage: "og-image.jpg",
   repo: "https://github.com/laravelcompany/docs.laravelmail.com",
 };
