@@ -6,7 +6,7 @@ import Callout from "@/components/Callout.astro";
 
 As of Version 1, Laravel Mail can be installed as a stand-alone application (i.e. including everything you need to run Laravel Mail), or as a package inside an existing Laravel application.
 
-This page covers the Package installation. If you want to install SendPortal as a stand-alone application, then head over to the [Installation guide](/getting-started/installation).
+This page covers the Package installation. If you want to install Laravel Mail as a stand-alone application, then head over to the [Installation guide](/getting-started/installation).
 
 ## Requirements
 
@@ -94,7 +94,7 @@ The following routes can all be placed inside a route group, in which case any g
 However, note that Laravel Mail's route names already include `laravel-mail.`.
 
 ### Web Routes (Required)
-To access SendPortal's application resources (e.g., Campaigns, Subscribers, Templates, Messages, etc) from the browser, you must register Laravel Mail's web routes.
+To access Laravel Mail's application resources (e.g., Campaigns, Subscribers, Templates, Messages, etc) from the browser, you must register Laravel Mail's web routes.
 
 Inside a route file, call the `LaravelCompany\Mail\Facades\LaravelMail::webRoutes()` method.
 
@@ -133,7 +133,7 @@ Inside a routes file, call the `LaravelCompany\Mail\Facades\LaravelMail::publicA
 LaravelMail::publicApiRoutes();
 ```
 
-### Set Up SendPortal API Routes (Optional)
+### Set Up Laravel Mail API Routes (Optional)
 If you wish to provide access to Laravel Mail's API, then you must register Laravel Mail's API routes.
 
 Inside a routes file, call the `LaravelCompany\Mail\Facades\LaravelMail::apiRoutes()` method.
@@ -192,6 +192,3 @@ As an example:
 ## Further Examples
 To see an example of Laravel Mail used as a fully multi-tenant application, please see our own [host application](https://github.com/laravelcompany/app.laravelmail.com),
 which takes advantage of all the integration features available in the Laravel Mail package.
-
-## Registering Resolvers & Routes
-In particular, see the `App\Providers\AppServiceProvider` class for registering resolvers, and see the `routes/web.php` and `routes/api.php` files for registering routes.

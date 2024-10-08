@@ -49,7 +49,7 @@ Retrieve a paginated list of all campaigns.
 
 ```
 GET /api/v1/campaigns HTTP/1.1
-Host: sendportal.local
+Host: app.laravelmail.com
 Authorization: Bearer 9w2fN7d4F3Banyv7gihYOWJEH6MvtYyZ
 Accept: application/json
 ```
@@ -67,8 +67,8 @@ Accept: application/json
             "status_id": 1,
             "template_id": 1,
             "email_service_id": 1,
-            "from_name": "SendPortal",
-            "from_email": "test@sendportal.io",
+            "from_name": "Laravel Mail",
+            "from_email": "marketing@laravelmail.com",
             "is_open_tracking": true,
             "is_click_tracking": true,
             "sent_count": 0,
@@ -83,8 +83,8 @@ Accept: application/json
         }
     ],
     "links": {
-        "first": "<https://sendportal.local/api/v1/campaigns?page=1>",
-        "last": "<https://sendportal.local/api/v1/campaigns?page=1>",
+        "first": "<https://app.laravelmail.com/api/v1/campaigns?page=1>",
+        "last": "<https://app.laravelmail.com/api/v1/campaigns?page=1>",
         "prev": null,
         "next": null
     },
@@ -92,7 +92,7 @@ Accept: application/json
         "current_page": 1,
         "from": 1,
         "last_page": 1,
-        "path": "<https://sendportal.local/api/v1/campaigns>",
+        "path": "<https://app.laravelmail.com/api/v1/campaigns>",
         "per_page": 25,
         "to": 1,
         "total": 1
@@ -121,7 +121,7 @@ Get details of a single campaign.
 
 ```
 GET /api/v1/campaigns/1 HTTP/1.1
-Host: sendportal.local
+Host: app.laravelmail.com
 Authorization: Bearer 9w2fN7d4F3Banyv7gihYOWJEH6MvtYyZ
 Accept: application/json
 ```
@@ -139,7 +139,7 @@ Accept: application/json
         "template_id": 1,
         "email_service_id": 1,
         "from_name": "SendPortal",
-        "from_email": "test@sendportal.io",
+        "from_email": "marketing@laravelmail.com",
         "is_open_tracking": true,
         "is_click_tracking": true,
         "sent_count": 0,
@@ -191,7 +191,7 @@ Create a new campaign.
 
 ```
 POST /api/campaigns HTTP/1.1
-Host: sendportal.local
+Host: app.laravelmail.com
 Authorization: Bearer 9w2fN7d4F3Banyv7gihYOWJEH6MvtYyZ
 Accept: application/json
 Content-Type: application/json
@@ -203,7 +203,7 @@ Content-Type: application/json
     "template_id": "1"
     "email_service_id": "1"
     "from_name": "SendPortal"
-    "from_email": "test@sendportal.io"
+    "from_email": "marketing@laravelmail.com"
     "is_open_tracking": "1"
     "is_click_tracking": "1"
     "send_to_all": "1"
@@ -224,8 +224,8 @@ Content-Type: application/json
         "status_id": 1,
         "template_id": 1,
         "email_service_id": 1,
-        "from_name": "SendPortal",
-        "from_email": "test@sendportal.io",
+        "from_name": "Laravel Mail",
+        "from_email": "marketing@laravelmail.com",
         "is_open_tracking": true,
         "is_click_tracking": true,
         "sent_count": 0,
@@ -277,7 +277,7 @@ Update a campaign.
 
 ```
 PUT /api/v1/campaigns/2 HTTP/1.1
-Host: sendportal.local
+Host: app.laravelmail.com
 Authorization: Bearer 9w2fN7d4F3Banyv7gihYOWJEH6MvtYyZ
 Accept: application/json
 Content-Type: application/json
@@ -300,8 +300,8 @@ Content-Type: application/json
         "status_id": 1,
         "template_id": 1,
         "email_service_id": 1,
-        "from_name": "SendPortal",
-        "from_email": "test@sendportal.io",
+        "from_name": "Laravel Mail",
+        "from_email": "marketing@laravelmail.com",
         "is_open_tracking": true,
         "is_click_tracking": true,
         "sent_count": 0,
@@ -341,7 +341,7 @@ None
 
 ```
 POST /api/v1/campaigns/2/send HTTP/1.1
-Host: sendportal.local
+Host: app.laravelmail.com
 Authorization: Bearer 9w2fN7d4F3Banyv7gihYOWJEH6MvtYyZ
 Accept: application/json
 Content-Type: application/json
@@ -359,8 +359,9 @@ Content-Type: application/json
     "status_id": 2,
     "template_id": 1,
     "email_service_id": 1,
-    "from_name": "SendPortal",
-    "from_email": "test@sendportal.io",
+    "from_name": "Laravel Mail",
+    "from_email": "marketing@laravelmail.com",
+
     "is_open_tracking": true,
     "is_click_tracking": true,
     "sent_count": 0,

@@ -11,12 +11,12 @@ To send e-mails using the Twilio Sendgrid provider, you will need a Sendgrid acc
 Once registered, open the `Setup Guide`, choose the `Web API` integration and select the PHP language option.
 
 
-Generate an API key and copy it to your SendPortal configuration.
+Generate an API key and copy it to your Laravel Mail configuration.
 
 
 Check the `I've integrated the code above` box and click Next.
 
-Send a test e-mail from SendPortal and if it works successfully click _Verify integration_.
+Send a test e-mail from Laravel Mail and if it works successfully click _Verify integration_.
 
 ## Tracking
 
@@ -27,8 +27,8 @@ Open and click tracking is enabled by default in SendGrid, but if you'd like to 
 You can also enable subscription tracking from this page. If enabled, SendGrid will automatically add unsubscribe links to the bottom of every e-mail you send.
 
 
-To enable tracking within SendPortal you'll need to enable event notifications from _Settings_ > _Mail Settings_.
+To enable tracking within Laravel Mail you'll need to enable event notifications from _Settings_ > _Mail Settings_.
 
-The `HTTP POST URL` depends on your domain, but must end with `/api/v1/webhooks/sendgrid`. For example, if SendPortal is installed at `https://campaigns.marketing.com`, then each webhook should point to `https://campaigns.marketing.com/api/v1/webhooks/sendgrid`.
+The `HTTP POST URL` depends on your domain, but must end with `/api/v1/webhooks/sendgrid`. For example, if Laravel Mail is installed at `https://campaigns.marketing.com`, then each webhook should point to `https://campaigns.marketing.com/api/v1/webhooks/sendgrid`.
 
 That's it! You're now setup to send and track e-mails using SendGrid.
