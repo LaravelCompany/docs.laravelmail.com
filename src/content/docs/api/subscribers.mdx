@@ -111,7 +111,7 @@ Retrieve the details of a single subscriber, including its tags.
 
 ```
 GET /api/v1/subscribers/1 HTTP/1.1
-Host: sendportal.local
+Host: app.laravelmail.com
 Authorization: Bearer 9w2fN7d4F3Banyv7gihYOWJEH6MvtYyZ
 Accept: application/json
 ```
@@ -144,7 +144,7 @@ Accept: application/json
 
 Create a new subscriber, optionally including tags that should be assigned to them; or update an existing subscriber based on their email address, optionally including the tags that should be assigned to them.
 
-This endpoint is overloaded to allow for the update of existing subscribers based on the email address provided in the request. This allows for a workflow where the caller of the API needn't know whether the subscriber is already created; this eliminates the need for developers to create different logical paths in their application and also allows subscribers to be updated without prior knowledge of their internal SendPortal ID.
+This endpoint is overloaded to allow for the update of existing subscribers based on the email address provided in the request. This allows for a workflow where the caller of the API needn't know whether the subscriber is already created; this eliminates the need for developers to create different logical paths in their application and also allows subscribers to be updated without prior knowledge of their internal Laravel Mail ID.
 
 The rules for creating new subscribers or updating existing subscribers are as follows:
 - If the email address is not currently used for a subscriber in the workspace, then a new subscriber will be created using the email address, name and tags provided
@@ -258,7 +258,7 @@ Update the details of the given subscriber.
 
 ```
 PUT /api/v1/subscribers/2 HTTP/1.1
-Host: sendportal.local
+Host: app.laravelmail.com
 Authorization: Bearer 9w2fN7d4F3Banyv7gihYOWJEH6MvtYyZ
 Accept: application/json
 Content-Type: application/json

@@ -1,8 +1,8 @@
 ---
 const { class: className } = Astro.props;
-import { Image } from "astro:assets";
+
 import { Button } from "@/components/ui/button";
-import KittyAstronaut from "@/assets/KittyAstronaut.svg";
+
 ---
 
 <div
@@ -21,8 +21,8 @@ import KittyAstronaut from "@/assets/KittyAstronaut.svg";
         Elevate Your Marketing with a <i class="text-primary">Laravel Mail</i> Platform
       </h1>
       <p class="text-lg">
-        Laravel Mail is a free email marketing platform for your Laravel application.
-        It allows you to send emails from your Laravel application to your customers.
+       <b> Laravel Mail</b> is a <b>free email marketing platform </b> for your Laravel application.
+        It allows you to send marketing emails from your Laravel application to your customers.
       </p>
       <a href="/getting-started" class="py-4">
         <Button size="lg" className="rounded-lg">
@@ -35,5 +35,3 @@ import KittyAstronaut from "@/assets/KittyAstronaut.svg";
     </div>
   </div>
 </div>
-
-<style></style>
